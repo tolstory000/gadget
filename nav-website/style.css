@@ -41,4 +41,6 @@ div.row:nth-child(3){margin-left:-100px; }
     position: absolute;
     left:4px;
     top:2px;
+    text-decoration: none;
+    color:#fff;
 }
