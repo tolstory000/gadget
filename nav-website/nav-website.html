@@ -35,13 +35,18 @@
             return document.createElement(tagName)
         }
         
-        function createSpan(textContent){
-            var span = tag('span')
-            span.textContent = textContent
-            span.className = 'text'
-            return span
+        function createTagA(keys,hash){
+            var a = tag('a')
+            a.textContent = keys
+            a.href = 'http://www.'+ hash
+            a.title = 'http://www.'+ hash
+            a.target = '_blank'
+            a.className = 'text'
+            console.log(hash)
+            return a
         }
         
+
         function createButton(id){
             var button=tag('button')
                 button.textContent = 'E'
@@ -84,13 +89,13 @@
             var row = keys[index]
             for (var index2=0; index2<row['length'];index2++){
 
-                var span = createSpan(row[index2]);
+                var a = createTagA(row[index2],hash[row[index2]]);
                 var button = createButton(row[index2]);
                 var img = createImg(hash[row[index2]]);
                 
                 var kbd=tag('kbd')
                 kbd.className = 'key-style'
-                kbd.appendChild(span)
+                kbd.appendChild(a)
                 kbd.appendChild(img)
                 kbd.appendChild(button)
 
@@ -123,6 +128,7 @@
             'hash': hash
         }
     }
+
 
     function listenToUser(hash){
         document.onkeypress = function(openWeb){ 
