@@ -1,0 +1,36 @@
+#canvas{
+  background:green;
+  display:block;
+}
+button{
+  width:80px;
+  height:30px;
+}
+#eraser{
+  position:fixed;
+  bottom:5px;
+  left:20px;
+}
+
+#red{
+  position:fixed;
+  bottom:5px;
+  left:120px;
+  background:red;
+  border-radius:20px;
+}
+#blue{
+  position:fixed;
+  bottom:5px;
+  left:220px;
+  background:blue;
+  border-radius:20px;
+}
+
+#black{
+  position:fixed;
+  bottom:5px;
+  left:320px;
+  background:black;
+  border-radius:20px;
+}
